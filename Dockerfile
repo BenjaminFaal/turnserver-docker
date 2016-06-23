@@ -10,9 +10,7 @@ RUN apt-get -y -f install
 
 ENV SHARED_KEY FILL_KEY_IN
 
-RUN echo verbose\nlt-cred-mech\nuser=$SHARED_KEY:$SHARED_KEY\nrest-api-separator=-
-
-COPY turnserver.conf /etc/turnserver.conf
+RUN echo verbose\nlt-cred-mech\nuser=$SHARED_KEY:$SHARED_KEY\nrest-api-separator=- > /etc/turnserver.conf
 
 EXPOSE 3478
 
